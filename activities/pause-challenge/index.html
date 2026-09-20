@@ -60,10 +60,29 @@
         <li>What felt easy, difficult, unusual, or unexpected?</li>
       </ul>
 
-      <div class="cta">
-        <h2>Interested in taking part?</h2>
-        <p>Use the activity invitation to register and learn more.</p>
-        <a class="button button-secondary" href="/contact/">Get in touch</a>
+      <div class="form-panel">
+        <span class="card-number">Take part</span>
+        <h2>Interested in trying it?</h2>
+        <p>
+          Use the signup form to register. After you have tried the activity,
+          a separate feedback form can be used to record what you noticed.
+        </p>
+        <div class="form-actions">
+          <a class="button button-primary" data-form-link="pauseChallenge.signup" target="_blank" rel="noopener" href="#"
+             aria-disabled="true">Register for Pause Challenge</a>
+          <a class="button button-secondary" data-form-link="pauseChallenge.feedback" target="_blank" rel="noopener" href="#"
+             aria-disabled="true">Share feedback</a>
+        </div>
+        <div class="confirmation-note">
+          <strong>After registration</strong>
+          <p class="small-note">
+            Follow the activity instructions in the form confirmation, then return
+            to this page later if you want to provide feedback.
+          </p>
+        </div>
+        <p class="form-note">
+          Add the Google Form links in <code>/assets/js/forms.js</code>.
+        </p>
       </div>
     </div>
   </section>
@@ -75,6 +94,7 @@
     <div>Small steps. Real experiences. Let's learn from each other.</div>
   </div>
 </footer>
+<script src="/assets/js/forms.js"></script>
 <script src="/assets/js/main.js"></script>
 </body>
 </html>
