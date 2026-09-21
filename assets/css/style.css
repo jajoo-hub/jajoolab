@@ -223,11 +223,12 @@ h3 { font-size: 1.35rem; }
   box-shadow: var(--shadow);
   font-weight: 700;
   font-size: .9rem;
+  z-index: 1;
 }
 
-.float-one { top: 18px; right: 5px; }
-.float-two { bottom: 26px; left: 5px; }
-.float-three { bottom: 5px; right: 36px; }
+.float-one { top: 18px; right: 10px; z-index: 2; }
+.float-two { bottom: 58px; left: -22px; z-index: 3; }
+.float-three { bottom: 4px; right: 18px; z-index: 2; }
 
 .section { padding: 86px 0; }
 
@@ -472,12 +473,19 @@ ul.clean {
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px;
   }
 
-  .hero-art { min-height: 330px; }
+  .hero-art {
+    min-height: 300px;
+    margin-top: 10px;
+  }
 
-  .orbit { width: 280px; height: 280px; }
+  .orbit {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto;
+  }
 
   .cards,
   .three-columns { grid-template-columns: 1fr; }
