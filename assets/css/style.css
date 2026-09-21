@@ -222,8 +222,10 @@ h3 { font-size: 1.35rem; }
   background: var(--surface);
   box-shadow: var(--shadow);
   font-weight: 700;
-  font-size: .9rem;
+  font-size: clamp(.72rem, 1.8vw, .9rem);
   z-index: 1;
+  max-width: 140px;
+  line-height: 1.2;
 }
 
 .float-one { top: 18px; right: 10px; z-index: 2; }
@@ -486,6 +488,16 @@ ul.clean {
     height: 240px;
     margin: 0 auto;
   }
+
+  .float-card {
+    max-width: 118px;
+    padding: 10px 12px;
+    font-size: .72rem;
+  }
+
+  .float-one { top: 12px; right: 8px; }
+  .float-two { bottom: 42px; left: 10px; }
+  .float-three { bottom: 4px; right: 12px; }
 
   .cards,
   .three-columns { grid-template-columns: 1fr; }
