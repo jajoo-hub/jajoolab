@@ -22,6 +22,26 @@ No server-side application is required for the website itself.
 
 ---
 
+
+
+# Sharing
+
+The home page, activities page, and individual activity pages include a reusable
+share button.
+
+The sharing logic is in:
+
+    assets/js/main.js
+
+When the browser supports the Web Share API, the button opens the device's
+native sharing sheet. On browsers without Web Share API support, it opens a
+WhatsApp share link containing the page URL and the configured message.
+
+No configuration is required. Activity pages use their current URL automatically,
+so the same function can be reused for future activities:
+
+    shareActivity("Activity title", "Message to share")
+
 # Google Form links
 
 The website now has a small reusable form-link configuration.
