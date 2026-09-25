@@ -1,0 +1,17 @@
+{
+  "name": "JajooLab - Micro Activities for Life Skills",
+  "short_name": "JajooLab",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4A90E2",
+  "description": "Bite-sized, real-world family activities to bridge the gap between knowing and applying life skills.",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='115' fill='%23FFFFFF'/><text x='50%' y='52%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='82'><tspan fill='%231A1A1A'>Jajoo</tspan><tspan fill='%234A90E2'>Lab</tspan></text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
