@@ -14,6 +14,14 @@ const FORM_LINKS = {
   pauseChallenge: {
     signup: "https://docs.google.com/forms/d/e/1FAIpQLSe4kFX1KjuJcy-OvBDvL67V0ea1jE2htK5FAkOvYPXPEQstmg/viewform?usp=dialog",
     feedback: "https://docs.google.com/forms/d/e/1FAIpQLScy_cEHhVqol4yzHYtcEcmwrWNRqf6nSz0K9qVEi0qP9uGY0A/viewform?usp=dialog"
+  },
+  bodyWeatherCheck: {
+    signup: "https://docs.google.com/forms/d/e/1FAIpQLSe2fGCh-ofOKwge0K1Szxo10J-Piv9-P-BCbdXBvyA_x7I4lw/viewform?usp=publish-editor",
+    feedback: "https://docs.google.com/forms/d/e/1FAIpQLSeft1ASWQaKNLC2XP8VV9CRqtFpGd5buGnrRWVhF5kt8ues_w/viewform?usp=publish-editor"
+  },
+  friendshipWithSound: {
+    signup: "https://docs.google.com/forms/d/e/1FAIpQLSdQzl82B_3AiAmFn3Ev-XlC7tM_GqfTWc_QN5XwOf663AQabA/viewform?usp=dialog",
+    feedback: "https://docs.google.com/forms/d/e/1FAIpQLSdV3tNclpnZRWT4WAxZlfUEdNVQBAK9acEP8pEJ_lDJUOTFOQ/viewform?usp=dialog"
   }
 };
 
