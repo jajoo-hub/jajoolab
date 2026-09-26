@@ -60,10 +60,25 @@ At the top of that file you will find:
       pauseChallenge: {
         signup: "#",
         feedback: "#"
+      },
+      bodyWeatherCheck: {
+        signup: "#",
+        feedback: "#"
       }
     };
 
+This is the exact place where you add or update Google Form links for every activity.
+
 Replace each `#` with the corresponding Google Form URL.
+
+Example:
+
+    bodyWeatherCheck: {
+      signup: "https://forms.gle/your-signup-form",
+      feedback: "https://forms.gle/your-feedback-form"
+    }
+
+You do not need to edit the activity HTML pages when changing the URLs, because the activity pages already refer to the matching key name like `data-form-link="bodyWeatherCheck.signup"`.
 
 ### Current One Question signup
 
@@ -84,6 +99,15 @@ Add the signup and feedback Google Form links when they are ready:
     pauseChallenge: {
       signup: "YOUR_PAUSE_SIGNUP_FORM_URL",
       feedback: "YOUR_PAUSE_FEEDBACK_FORM_URL"
+    }
+
+### Body Weather Check
+
+Add the form links in the same place:
+
+    bodyWeatherCheck: {
+      signup: "YOUR_BODY_WEATHER_SIGNUP_FORM_URL",
+      feedback: "YOUR_BODY_WEATHER_FEEDBACK_FORM_URL"
     }
 
 You do not need to edit the activity HTML pages when adding or changing these links.
