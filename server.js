@@ -10,6 +10,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
 
+app.use(express.json());
+
+// API endpoint to log parent feedback in development
+app.post('/api/feedback', (req, res) => {
+  console.log('[Daily Feedback Received]', req.body);
+  res.json({ success: true, message: 'Observation recorded' });
+});
+
 // Serve static assets and files
 app.use(express.static(__dirname, { extensions: ['html'] }));
 

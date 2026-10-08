@@ -248,6 +248,56 @@
         </div>
       </div>
 
+      <!-- Daily Parent Feedback Box (Logged to Google Sheet) -->
+      <div class="feedback-box-panel" id="daily-log">
+        <div class="feedback-box-header">
+          <span class="card-number">Daily Reflection</span>
+          <h2>Jot down a quick observation</h2>
+          <p>
+            Right after today’s weather check, write down what you noticed in your own words.
+            Every observation is saved directly into our learning spreadsheet.
+          </p>
+        </div>
+
+        <form class="daily-feedback-form" data-activity="Body Weather Check" data-activity-id="bodyWeatherCheck">
+          <div class="form-group">
+            <label for="feedback-obs-weather">What did you notice today?</label>
+            <textarea
+              id="feedback-obs-weather"
+              name="observation"
+              rows="3"
+              required
+              placeholder="e.g. I said I was cloudy, and she chose stormy because of a rainy recess. She seemed relieved to say it out loud..."
+            ></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="feedback-name-weather">Your name or initials (optional)</label>
+              <input type="text" id="feedback-name-weather" name="parentName" placeholder="e.g. Maya's Dad">
+            </div>
+            <div class="form-group">
+              <label for="feedback-date-weather">Date</label>
+              <input type="date" id="feedback-date-weather" name="date">
+            </div>
+          </div>
+
+          <div class="form-actions" style="margin-top: 10px;">
+            <button type="submit" class="button button-primary submit-btn">
+              <span class="btn-text">Save observation to spreadsheet</span>
+              <span class="btn-spinner" style="display: none;">Saving note...</span>
+            </button>
+          </div>
+
+          <div class="feedback-status" style="display: none;" role="alert"></div>
+
+          <div class="previous-logs" style="display: none;">
+            <h4>Recent observations on this device</h4>
+            <ul class="previous-logs-list"></ul>
+          </div>
+        </form>
+      </div>
+
       <!-- Participation Panel -->
       <div class="form-panel">
         <span class="card-number">Participation</span>

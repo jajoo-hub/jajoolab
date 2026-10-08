@@ -856,3 +856,157 @@ ul.clean {
   margin-bottom: 6px;
 }
 
+/* ==========================================================================
+   Daily Parent Feedback Box (Spreadsheet Logging)
+   ========================================================================== */
+
+.feedback-box-panel {
+  margin-top: 48px;
+  padding: 34px 36px;
+  background: #fbf9f4;
+  border: 1px solid #ebd9c8;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(50, 40, 30, 0.04);
+}
+
+.feedback-box-header {
+  margin-bottom: 22px;
+}
+
+.feedback-box-header h2 {
+  margin: 6px 0 10px;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.feedback-box-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+.daily-feedback-form {
+  display: grid;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.form-group textarea,
+.form-group input[type="text"],
+.form-group input[type="date"] {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid #dcd5c7;
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem; /* 16px minimum prevents iOS zoom */
+  line-height: 1.5;
+  box-sizing: border-box;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.form-group textarea:focus-visible,
+.form-group input[type="text"]:focus-visible,
+.form-group input[type="date"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 105px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+}
+
+.feedback-status {
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feedback-status.is-success {
+  background: #edf5ea;
+  border: 1px solid #cce0c7;
+  color: #274d22;
+}
+
+.feedback-status.is-error {
+  background: #fdf1ed;
+  border: 1px solid #ebd0c7;
+  color: #8c3826;
+}
+
+.previous-logs {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px dashed #dec4ad;
+}
+
+.previous-logs h4 {
+  margin: 0 0 12px;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #7d6b5c;
+}
+
+.previous-logs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.previous-log-entry {
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid #e7ded2;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.previous-log-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .feedback-box-panel {
+    padding: 24px 20px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+

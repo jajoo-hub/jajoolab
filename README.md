@@ -50,7 +50,49 @@ The website now has a small reusable form-link configuration.
 
     assets/js/forms.js
 
-At the top of that file you will find:
+### Daily Parent Feedback (Direct Google Spreadsheet Sync)
+
+Every activity page now has an in-page feedback box where parents can write an observation in their own words right after the activity.
+
+To connect your Google Spreadsheet:
+
+1. Create a new Google Spreadsheet (e.g. "JajooLab Daily Observations").
+2. Add column headers in Row 1: `Timestamp`, `Date`, `Activity`, `Observation`, `Parent Name`.
+3. Click **Extensions → Apps Script**, and paste this script:
+
+```javascript
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  sheet.appendRow([
+    data.timestamp || new Date(),
+    data.date || '',
+    data.activity || '',
+    data.observation || '',
+    data.parentName || 'Anonymous'
+  ]);
+  return ContentService.createTextOutput(JSON.stringify({"status": "success"}))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+```
+
+4. Click **Deploy → New deployment**:
+   - Select type: **Web app**
+   - Execute as: **Me**
+   - Who has access: **Anyone**
+5. Copy the generated Web App URL and paste it into `assets/js/forms.js`:
+
+```javascript
+const GOOGLE_SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycb.../exec";
+```
+
+*(Note: Even before setting this URL, observations are automatically preserved locally on the parent's device so no thoughts are lost).*
+
+---
+
+### External Google Form Links
+
+At the top of `assets/js/forms.js` you will find:
 
     const FORM_LINKS = {
       oneQuestion: {
