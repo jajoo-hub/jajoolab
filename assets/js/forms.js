@@ -29,9 +29,8 @@ const FORM_LINKS = {
  * Google Spreadsheet Endpoint
  * ----------------------------
  * Set your deployed Google Apps Script Web App URL here.
- * (Leave as "#" while testing; submissions will still save locally on device).
  */
-const GOOGLE_SHEET_ENDPOINT = "#";
+const GOOGLE_SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycby_IkTRN6veMkynhlwYxLk-ofpeKh9SoP2rIAMpwjI6rEYvp52dnLzPUFxKrDMuzfP-/exec";
 
 function initExternalFormLinks() {
   document.querySelectorAll("[data-form-link]").forEach((element) => {
@@ -140,7 +139,7 @@ function initDailyFeedbackForms() {
           await fetch(GOOGLE_SHEET_ENDPOINT, {
             method: "POST",
             mode: "no-cors",
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
             body: JSON.stringify(payload)
           });
           syncedToCloud = true;
