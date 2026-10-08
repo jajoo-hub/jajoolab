@@ -1,16 +1,20 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 :root {
   --bg: #fbfaf7;
   --surface: #ffffff;
-  --surface-soft: #f2f0e9;
-  --text: #24302b;
-  --muted: #68736e;
-  --line: #e4e0d6;
-  --accent: #6d7f69;
-  --accent-dark: #50614c;
-  --warm: #d9a66f;
+  --surface-soft: #f4f2ec;
+  --text: #222b26;
+  --muted: #647069;
+  --line: #e3ded5;
+  --accent: #5e735a;
+  --accent-dark: #3f523c;
+  --warm: #c98e54;
+  --font-serif: "Newsreader", "Charter", "Georgia", "Cambria", serif;
+  --font-sans: "Plus Jakarta Sans", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --shadow: 0 16px 45px rgba(38, 48, 43, .08);
-  --radius: 22px;
+  --radius: 20px;
   --max: 1120px;
 }
 
@@ -20,10 +24,11 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-sans);
   color: var(--text);
   background: var(--bg);
-  line-height: 1.65;
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
 }
 
 a { color: inherit; }
@@ -115,21 +120,21 @@ a { color: inherit; }
   background: var(--warm);
 }
 
-h1, h2, h3 {
-  line-height: 1.12;
-  letter-spacing: -.035em;
+h1, h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -.02em;
   margin-top: 0;
 }
 
-h1 {
-  font-size: clamp(3rem, 6vw, 5.3rem);
-  margin: 20px 0;
-  max-width: 760px;
+h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-top: 0;
 }
-
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-
-h3 { font-size: 1.35rem; }
 
 .lead {
   font-size: 1.18rem;
@@ -556,3 +561,298 @@ ul.clean {
   .hero-art { transform: scale(.9); }
   .cta { padding: 28px 22px; }
 }
+
+/* ==========================================================================
+   Editorial Activity Guide Components (Parent Preparation View)
+   ========================================================================== */
+
+/* Clean Unboxed Metadata (Zero-Pill Discipline) */
+.meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.meta-dot {
+  color: var(--warm);
+  user-select: none;
+}
+
+/* Pocket Summary Card (At-a-Glance Anchor for Parents) */
+.pocket-card {
+  margin: 32px 0 44px;
+  padding: 28px 30px;
+  background: #fbf8f2;
+  border: 1px solid #ebd9c8;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(78, 64, 48, 0.04);
+}
+
+.pocket-kicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8c6036;
+  margin-bottom: 12px;
+}
+
+.pocket-prompt {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  line-height: 1.35;
+  color: var(--text);
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.pocket-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  padding-top: 18px;
+  border-top: 1px dashed #dec4ad;
+}
+
+.pocket-item h4 {
+  margin: 0 0 4px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #7b6f63;
+  font-family: var(--font-sans);
+}
+
+.pocket-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+/* Guardrails Card (What NOT to do) */
+.guardrail-card {
+  margin: 36px 0;
+  padding: 28px 30px;
+  background: #fdf5f2;
+  border: 1px solid #edd5cc;
+  border-left: 5px solid #d97864;
+  border-radius: 16px;
+}
+
+.guardrail-card h3 {
+  color: #923a26;
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.guardrail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.guardrail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #4a3834;
+}
+
+.guardrail-icon {
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #d97864;
+  line-height: 1.4;
+}
+
+/* Parent Field Role Card */
+.role-card {
+  margin: 36px 0;
+  padding: 28px 30px;
+  background: #f2f6f1;
+  border: 1px solid #d4dfd0;
+  border-left: 5px solid var(--accent);
+  border-radius: 16px;
+}
+
+.role-card h3 {
+  color: var(--accent-dark);
+  margin: 0 0 12px;
+}
+
+.role-card p {
+  margin: 0;
+  color: #2e3a2d;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Flow Step Timeline */
+.flow-steps {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.flow-step {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 16px;
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.flow-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #eef2eb;
+  color: var(--accent-dark);
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  font-size: 0.9rem;
+}
+
+.flow-step h4 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-family: var(--font-sans);
+}
+
+.flow-step p {
+  margin: 0;
+  font-size: 0.94rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Observation Questions */
+.observation-block {
+  margin: 36px 0;
+  padding: 28px 30px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.observation-questions {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+.observation-question-item {
+  padding: 14px 18px;
+  background: var(--surface-soft);
+  border-radius: 12px;
+  font-size: 0.96rem;
+  color: var(--text);
+  line-height: 1.5;
+  display: flex;
+  gap: 12px;
+}
+
+.observation-num {
+  font-weight: 700;
+  color: var(--accent-dark);
+  flex-shrink: 0;
+}
+
+/* "Add to Home Screen" Cue */
+.home-screen-card {
+  margin: 44px 0 28px;
+  padding: 26px 28px;
+  border: 1px solid #d8e2d6;
+  background: #f7faf6;
+  border-radius: var(--radius);
+}
+
+.home-screen-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.home-screen-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.home-screen-tabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.pwa-tab-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all .15s ease;
+}
+
+.pwa-tab-btn:hover {
+  color: var(--text);
+  border-color: #cbd5cb;
+}
+
+.pwa-tab-btn.active {
+  background: var(--accent-dark);
+  color: #fff;
+  border-color: var(--accent-dark);
+}
+
+.pwa-step-guide {
+  margin-top: 14px;
+  padding: 16px 18px;
+  background: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.pwa-step-guide ol {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.pwa-step-guide li {
+  margin-bottom: 6px;
+}
+

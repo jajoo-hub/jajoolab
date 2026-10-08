@@ -1,0 +1,8 @@
+{
+  "name": "JajooLab",
+  "description": "Small, practical parent-child activities that help children notice moments and use skills they already know.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

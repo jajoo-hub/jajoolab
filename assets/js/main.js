@@ -47,3 +47,35 @@ if (menuButton && navLinks) {
     );
   });
 }
+
+// Add to Home Screen guide tabs
+function initPwaTabs() {
+  const tabButtons = document.querySelectorAll(".pwa-tab-btn");
+  const guides = document.querySelectorAll(".pwa-step-guide");
+  if (!tabButtons.length) return;
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const platform = btn.getAttribute("data-tab");
+      tabButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      guides.forEach((guide) => {
+        if (guide.getAttribute("data-platform") === platform) {
+          guide.style.display = "block";
+        } else {
+          guide.style.display = "none";
+        }
+      });
+    });
+  });
+
+  // Auto-detect iOS vs Android/Desktop
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const initialTab = isIOS ? "ios" : "android";
+  const defaultBtn = document.querySelector(`.pwa-tab-btn[data-tab="${initialTab}"]`);
+  if (defaultBtn) defaultBtn.click();
+}
+
+document.addEventListener("DOMContentLoaded", initPwaTabs);
+

@@ -3,9 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Body Weather Check · JajooLab</title>
-  <meta name="description" content="JajooLab — small, practical parent-child activities for learning how healthy life skills are applied in everyday moments.">
+  <title>Body Weather Check · Parent Practice Guide · JajooLab</title>
+  <meta name="description" content="A simple weather-word check-in to notice how everyone feels in an ordinary moment. Screen-free activity for families.">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- PWA & Add to Home Screen -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3f523c">
+
+  <!-- Mobile Safari / iOS Support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="JajooLab">
 </head>
 <body>
 
@@ -15,7 +24,7 @@
     <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="/activities/" aria-current='page'>Activities</a>
+      <a href="/activities/" aria-current="page">Activities</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
     </nav>
@@ -25,84 +34,223 @@
 <main>
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow">Activity 03</span>
+      <div class="meta-line">
+        <span>Activity 03</span>
+        <span class="meta-dot">·</span>
+        <span>Check-in Practice Guide</span>
+        <span class="meta-dot">·</span>
+        <span>~2 min read</span>
+        <span class="meta-dot">·</span>
+        <span>Screen-free for children</span>
+      </div>
       <h1>Body Weather Check</h1>
-      <p class="lead">A simple check-in for noticing how someone is feeling in an ordinary moment.</p>
+      <p class="lead">A simple weather-word check-in for noticing how someone feels in an ordinary moment.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container content">
-      <h2>The activity</h2>
-      <p>
-        Body Weather Check is a simple family activity that helps children notice how they are feeling in an ordinary moment.
-      </p>
-      <p>
-        At a random, normal time during the day, the parent and child each check their own “body weather” using three simple words:
-      </p>
 
-      <div class="cards">
-        <div class="card">
-          <h3>☀️ Sunny</h3>
+      <!-- Pocket Summary Card for Fast Recall -->
+      <div class="pocket-card">
+        <div class="pocket-kicker">
+          <span>Pocket Recall</span>
+          <span class="meta-dot">·</span>
+          <span>Hold this in mind for the week</span>
         </div>
-        <div class="card">
-          <h3>☁️ Cloudy</h3>
+        <div class="pocket-prompt">
+          “My weather is cloudy today because I’m a bit tired. What’s your body weather right now?”
         </div>
-        <div class="card">
-          <h3>⛈️ Stormy</h3>
+        <div class="pocket-details">
+          <div class="pocket-item">
+            <h4>When to try</h4>
+            <p>At a random, normal time during the day (never during an active tantrum or crisis).</p>
+          </div>
+          <div class="pocket-item">
+            <h4>The parent’s role</h4>
+            <p>Share your own weather first. Accept their answer without attempting to fix or cheer them up.</p>
+          </div>
+          <div class="pocket-item">
+            <h4>The child’s role</h4>
+            <p>Can say sunny, cloudy, stormy, or invent their own weather word. No explanation required.</p>
+          </div>
         </div>
       </div>
 
+      <h2>The problem we are looking at</h2>
       <p>
-        There is no right or wrong answer. The purpose is simply to notice, not to change, explain, or fix how anyone feels.
+        Asking children <em>“How are you feeling?”</em> frequently meets a one-word wall: <em>“Fine”</em> or <em>“Good.”</em>
+      </p>
+      <p>
+        Emotional vocabulary like <em>“anxious,”</em> <em>“frustrated,”</em> or <em>“overwhelmed”</em> can feel heavy, analytical, and intimidating for young minds.
+      </p>
+      <p>
+        Weather words are naturally neutral and free of blame. Nobody feels guilty for a rainy day. By using weather, children can notice their internal state without feeling judged or defective.
       </p>
 
-      <div class="callout">
-        <strong>Before you begin</strong>
+      <!-- The Three Words -->
+      <h2>The three core weather words</h2>
+      <div class="cards" style="margin-bottom: 30px;">
+        <div class="card" style="text-align: center; padding: 22px;">
+          <div style="font-size: 2rem; margin-bottom: 6px;">☀️</div>
+          <h3 style="margin: 0; font-size: 1.15rem;">Sunny</h3>
+          <p style="margin: 6px 0 0; font-size: 0.88rem; color: var(--muted);">Warm, light, energized, calm, or content.</p>
+        </div>
+        <div class="card" style="text-align: center; padding: 22px;">
+          <div style="font-size: 2rem; margin-bottom: 6px;">☁️</div>
+          <h3 style="margin: 0; font-size: 1.15rem;">Cloudy</h3>
+          <p style="margin: 6px 0 0; font-size: 0.88rem; color: var(--muted);">Tired, quiet, daydreaming, or a bit grey.</p>
+        </div>
+        <div class="card" style="text-align: center; padding: 22px;">
+          <div style="font-size: 2rem; margin-bottom: 6px;">⛈️</div>
+          <h3 style="margin: 0; font-size: 1.15rem;">Stormy</h3>
+          <p style="margin: 6px 0 0; font-size: 0.88rem; color: var(--muted);">Turbulent, restless, heavy, or windy.</p>
+        </div>
+      </div>
+
+      <!-- What NOT to do: Crucial Guardrails -->
+      <div class="guardrail-card">
+        <h3>
+          <span class="guardrail-icon">✕</span>
+          <span>What NOT to do (Crucial Guardrails)</span>
+        </h3>
+        <ul class="guardrail-list">
+          <li class="guardrail-item">
+            <span class="guardrail-icon">✕</span>
+            <div>
+              <strong>Never try to "fix" cloudy or stormy weather.</strong>
+              If your child says <em>“I’m stormy,”</em> resist saying <em>“Oh no! What can we do to make you sunny?”</em> Simply accept: <em>“Stormy. Thank you for telling me.”</em>
+            </div>
+          </li>
+          <li class="guardrail-item">
+            <span class="guardrail-icon">✕</span>
+            <div>
+              <strong>Never use this immediately after a heated meltdown or fight.</strong>
+              Avoid asking right after they’ve become very angry or upset. Handle that moment in your family’s usual way, and save this practice for calm, ordinary moments.
+            </div>
+          </li>
+          <li class="guardrail-item">
+            <span class="guardrail-icon">✕</span>
+            <div>
+              <strong>Never demand an explanation or reason.</strong>
+              If they don’t want to explain why they are cloudy, that is completely fine. The practice is noticing, not psychoanalyzing.
+            </div>
+          </li>
+          <li class="guardrail-item">
+            <span class="guardrail-icon">✕</span>
+            <div>
+              <strong>Never attach moral judgment to words.</strong>
+              Sunny is not “good” and stormy is not “bad.” All weather is natural, normal, and passes.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- The Parent's Role -->
+      <div class="role-card">
+        <h3>The Golden Principle: Weather Changes On Its Own</h3>
         <p>
-          Please choose ordinary, calm moments for this activity. Avoid asking the question immediately after your child has become very angry, upset, unusually excited, or unusually happy.
-        </p>
-        <p>
-          If your child is going through an intense moment, you do not need to use Body Weather Check at that time. Please handle that moment in whatever way is appropriate for your family.
+          Just like rain clouds outside, feelings pass naturally when acknowledged without resistance. The goal is to notice what is present, not to manufacture sunshine.
         </p>
       </div>
 
-      <h2>How to do it</h2>
-      <p>Start by sharing your own Body Weather.</p>
-      <p>For example:</p>
-
-      <div class="callout">
-        <p><strong>“My weather is cloudy today because I’m feeling a little tired.”</strong></p>
-        <p>Then ask:</p>
-        <p><strong>“What’s your body weather right now?”</strong></p>
+      <!-- How to do it in 4 steps -->
+      <h2>How to do it in 4 steps</h2>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-step-num">1</div>
+          <div>
+            <h4>Pick an Ordinary Moment</h4>
+            <p>Choose a normal, neutral time — sitting on the couch, walking to school, or eating a snack.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">2</div>
+          <div>
+            <h4>Share Your Weather First</h4>
+            <p>Start with yourself: <em>“My weather is cloudy today because I’m feeling a little tired.”</em></p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">3</div>
+          <div>
+            <h4>Ask Without Pressure</h4>
+            <p>Ask: <em>“What’s your body weather right now?”</em> Let them pick any word or weather metaphor they like.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">4</div>
+          <div>
+            <h4>Acknowledge and Continue</h4>
+            <p>Respond with warmth: <em>“Got it, thank you for sharing that with me.”</em> Carry on with your day.</p>
+          </div>
+        </div>
       </div>
 
-      <p>
-        Your child can say <strong>sunny, cloudy, stormy</strong>, or use their own words.
-      </p>
-      <p>
-        Let your child decide what the weather words mean to them. There is no fixed meaning such as “sunny = happy” or “stormy = angry.”
-      </p>
-      <p>
-        You can share your own meaning too. Your child does not have to explain their answer.
-      </p>
-
-      <div class="callout">
-        <strong>Most importantly</strong>
-        <p>There is nothing that needs to be fixed.</p>
+      <!-- What to Observe as a Parent -->
+      <div class="observation-block">
+        <span class="card-number">Parent Field Notes</span>
+        <h2>What to notice this week</h2>
+        <p>After trying this once or twice, take 30 seconds to reflect:</p>
+        <ul class="observation-questions">
+          <li class="observation-question-item">
+            <span class="observation-num">01</span>
+            <span>Did your child answer quickly, or did they hesitate to find a word?</span>
+          </li>
+          <li class="observation-question-item">
+            <span class="observation-num">02</span>
+            <span>Did you notice any difference between what they said and how their body appeared?</span>
+          </li>
+          <li class="observation-question-item">
+            <span class="observation-num">03</span>
+            <span>Did you share your own weather without feeling the need to explain it away?</span>
+          </li>
+          <li class="observation-question-item">
+            <span class="observation-num">04</span>
+            <span>Did the check-in feel easy, awkward, or surprisingly ordinary?</span>
+          </li>
+        </ul>
       </div>
 
-      <h2>What to notice</h2>
-      <ul class="clean">
-        <li>Did your child answer quickly or with hesitation?</li>
-        <li>Did you notice any difference between what they said and how they seemed?</li>
-        <li>Did you share your own weather without trying to explain it away?</li>
-        <li>Did the moment feel easy, awkward, or ordinary?</li>
-        <li>What did you notice about your own response?</li>
-      </ul>
+      <!-- Add to Home Screen Cue -->
+      <div class="home-screen-card">
+        <div class="home-screen-header">
+          <div class="home-screen-icon">📲</div>
+          <div>
+            <h3 style="margin: 0; font-size: 1.15rem;">Keep JajooLab on your Home Screen</h3>
+            <p style="margin: 4px 0 0; font-size: 0.9rem; color: var(--muted);">
+              Read the guide once. Tap the icon later in the week when you’re ready to share your quick observation.
+            </p>
+          </div>
+        </div>
 
+        <div class="home-screen-tabs">
+          <button type="button" class="pwa-tab-btn active" data-tab="ios">iPhone (Safari)</button>
+          <button type="button" class="pwa-tab-btn" data-tab="android">Android (Chrome)</button>
+        </div>
+
+        <div class="pwa-step-guide" data-platform="ios">
+          <strong>On iPhone / iPad:</strong>
+          <ol>
+            <li>Tap the <strong>Share</strong> button at the bottom of Safari (<span style="font-size: 1.1em;">⎋</span> square with arrow).</li>
+            <li>Scroll down and tap <strong>Add to Home Screen</strong> (<span style="font-size: 1.1em;">⊞</span>).</li>
+            <li>Tap <strong>Add</strong> in the top right. JajooLab will appear like an app on your screen.</li>
+          </ol>
+        </div>
+
+        <div class="pwa-step-guide" data-platform="android" style="display: none;">
+          <strong>On Android:</strong>
+          <ol>
+            <li>Tap the <strong>three dots menu (⋮)</strong> in Chrome.</li>
+            <li>Select <strong>Add to Home screen</strong> or <strong>Install app</strong>.</li>
+            <li>Confirm to add. JajooLab will be accessible in one tap anytime.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Participation Panel -->
       <div class="form-panel">
-        <span class="card-number">Take part</span>
+        <span class="card-number">Participation</span>
         <h2>Interested in trying it?</h2>
         <p>
           Registration is short. After registering, try the activity in an ordinary moment and later share what you noticed through the feedback form.
@@ -110,27 +258,25 @@
 
         <div class="form-actions">
           <a class="button button-primary" data-form-link="bodyWeatherCheck.signup" target="_blank" rel="noopener" href="#">Register for Body Weather Check</a>
-          <a class="button button-secondary" data-form-link="bodyWeatherCheck.feedback" target="_blank" rel="noopener" href="#">Share feedback</a>
+          <a class="button button-secondary" data-form-link="bodyWeatherCheck.feedback" target="_blank" rel="noopener" href="#">Share your observation</a>
+          <button class="button button-secondary share-button" type="button"
+                  onclick="shareActivity('Body Weather Check · JajooLab', 'Notice how the body feels in an ordinary moment with simple weather words. A parent-child activity on JajooLab.')">
+            Share with a parent
+          </button>
         </div>
 
         <div class="confirmation-note">
           <strong>After registration</strong>
           <p class="small-note">
-            You will see the activity guidance in the form confirmation. You can then return here later to share your experience.
-          </p>
-        </div>
-
-        <div class="feedback-preview">
-          <strong>About the feedback</strong>
-          <p class="small-note">
-            The feedback is focused on what happened, what was noticed, and how the interaction felt in everyday life. It is designed to capture real experience rather than a specific outcome.
+            The feedback is focused on what happened, what was noticed, and how the interaction felt in everyday life. Real experience is what matters.
           </p>
         </div>
 
         <p class="form-note">
-          The forms open securely in Google Forms. The website keeps the activity information and participation journey in one place.
+          Forms open securely in Google Forms.
         </p>
       </div>
+
     </div>
   </section>
 </main>
@@ -138,9 +284,10 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div>© 2026 JajooLab</div>
-    <div>Small steps. Real experiences. Let's learn from each other.</div>
+    <div>Small steps. Real experiences. Let’s learn from each other.</div>
   </div>
 </footer>
+
 <script src="/assets/js/forms.js"></script>
 <script src="/assets/js/main.js"></script>
 </body>

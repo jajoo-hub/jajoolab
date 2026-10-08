@@ -3,9 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Friendship with Sound · JajooLab</title>
-  <meta name="description" content="JajooLab — small, practical parent-child activities for learning how healthy life skills are applied in everyday moments.">
+  <title>Friendship with Sound · Parent Guide · JajooLab</title>
+  <meta name="description" content="Notice when a voice became louder, then talk about it later when calm. A weekly screen-free activity guide for parents.">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- PWA & Add to Home Screen -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3f523c">
+
+  <!-- Mobile Safari / iOS Support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="JajooLab">
 </head>
 <body>
 
@@ -15,7 +24,7 @@
     <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="/activities/" aria-current='page'>Activities</a>
+      <a href="/activities/" aria-current="page">Activities</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
     </nav>
@@ -25,116 +34,229 @@
 <main>
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow">Activity 04</span>
+      <div class="meta-line">
+        <span>Activity 04</span>
+        <span class="meta-dot">·</span>
+        <span>Weekly Parent Guide</span>
+        <span class="meta-dot">·</span>
+        <span>~3 min read</span>
+        <span class="meta-dot">·</span>
+        <span>Screen-free for children</span>
+      </div>
       <h1>Friendship with Sound</h1>
-      <p class="lead">Notice when a voice became louder, then talk about it later when calm.</p>
+      <p class="lead">Notice when a voice became louder — then talk about it hours later when everyone is calm.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container content">
-      <h2>Introduction</h2>
+
+      <!-- Pocket Summary Card for Fast Recall -->
+      <div class="pocket-card">
+        <div class="pocket-kicker">
+          <span>Pocket Recall</span>
+          <span class="meta-dot">·</span>
+          <span>Hold this in mind for the week</span>
+        </div>
+        <div class="pocket-prompt">
+          “Do you remember a time when your voice became louder?”
+        </div>
+        <div class="pocket-details">
+          <div class="pocket-item">
+            <h4>When to try</h4>
+            <p>Hours later in an ordinary calm moment (bedtime, in the car, or a relaxed walk).</p>
+          </div>
+          <div class="pocket-item">
+            <h4>The parent’s role</h4>
+            <p>Simply listen and understand. No correcting, lecturing, or fixing.</p>
+          </div>
+          <div class="pocket-item">
+            <h4>The child’s role</h4>
+            <p>Free to share what happened, or free to say they don’t remember.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>The problem we are looking at</h2>
       <p>
-        <strong>Friendship with Sound</strong> is a simple family activity that helps children notice and communicate moments when their voice became louder.
+        When children shout, scream, or raise their voices, their nervous systems are in an emotional reaction.
+        In that exact moment, they rarely notice what they are doing.
       </p>
       <p>
-        Sometimes, when we experience different feelings or situations, we may shout without really noticing it in the moment.
+        If we correct or scold them while it is happening, their defenses go up. They focus on defending themselves rather than developing awareness.
       </p>
       <p>
-        The activity gives children an opportunity to <strong>notice when they shouted, remember what happened, and share the moment with a parent later</strong>, when it works for their family.
-      </p>
-      <p>
-        There is no right or wrong answer. The purpose is simply to <strong>notice, remember, and communicate</strong>, not to correct the child or identify a particular emotion.
+        <strong>Friendship with Sound</strong> creates a safe bridge hours later. It gives your child space to notice what happened in a calm moment, without shame, fear, or a lecture.
       </p>
 
-      <div class="callout">
-        <strong>Before you begin</strong>
+      <!-- What NOT to do: Crucial Guardrails -->
+      <div class="guardrail-card">
+        <h3>
+          <span class="guardrail-icon">✕</span>
+          <span>What NOT to do (Crucial Guardrails)</span>
+        </h3>
+        <ul class="guardrail-list">
+          <li class="guardrail-item">
+            <span class="guardrail-icon">✕</span>
+            <div>
+              <strong>Never bring this up during or immediately after shouting.</strong>
+              During an intense moment, the child cannot reflect. Handle that moment naturally in whatever way works best for your family, and let the storm pass completely.
+            </div>
+          </li>
+          <li class="guardrail-item">
+            <span class="guardrail-icon">✕</span>
+            <div>
+              <strong>Never correct their story or lecture them.</strong>
+              If they say, <em>“My sister was annoying so I screamed,”</em> do not reply with <em>“Well, screaming doesn’t solve anything.”</em> Instead, simply reflect: <em>“I see. What happened right after that?”</em>
+            </div>
+          </li>
+          <li class="guardrail-item">
+            <span class="guardrail-icon">✕</span>
+            <div>
+              <strong>Never demand an apology or an emotion label.</strong>
+              Do not force them to say they were “angry” or make them say sorry. The breakthrough is simply remembering the moment and speaking openly with you.
+            </div>
+          </li>
+          <li class="guardrail-item">
+            <span class="guardrail-icon">✕</span>
+            <div>
+              <strong>Never push if they resist.</strong>
+              If your child says <em>“I don’t remember”</em> or changes the subject, let it go immediately with a smile: <em>“That’s completely okay!”</em>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- The Parent's Role -->
+      <div class="role-card">
+        <h3>The Golden Principle: Listen Without Fixing</h3>
         <p>
-          Please let your child notice these moments naturally during everyday life.
-        </p>
-        <p>
-          You do not need to ask your child immediately after they have shouted.
-        </p>
-        <p>
-          Instead, when your child is calm and both of you have time, you can ask whether they remember a moment when their voice became louder and invite them to share what happened.
-        </p>
-        <p>
-          If your child does not remember a moment or does not want to talk about it, that is completely okay.
-        </p>
-        <p>
-          This activity is not intended to interrupt or manage an intense moment when it is happening. Please handle such moments in whatever way is appropriate for your family.
+          Your child already knows that shouting is usually disapproved of. What they lack is safe self-awareness. When you listen with curious warmth and zero judgment, they feel safe enough to look back at their own actions.
         </p>
       </div>
 
-      <h2>How to do it</h2>
-      <p>
-        When your child notices that they shouted, they can remember the moment and tell you about it later.
-      </p>
-      <p>
-        When you have a suitable moment together, you can simply ask:
-      </p>
-
-      <div class="callout">
-        <p><strong>“Do you remember a time when you shouted?”</strong></p>
+      <h2>How the conversation flows</h2>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-step-num">1</div>
+          <div>
+            <h4>Notice and Wait</h4>
+            <p>During the day, silently notice a moment when your child’s voice became loud. Say nothing about the activity then.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">2</div>
+          <div>
+            <h4>Find a Relaxed Setting</h4>
+            <p>Choose an ordinary moment hours later — tucked into bed, washing dishes together, or riding in the car.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">3</div>
+          <div>
+            <h4>Offer the Gentle Prompt</h4>
+            <p>Ask casually: <em>“Do you remember a time today when your voice became louder?”</em> Give them time to think without rushing.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">4</div>
+          <div>
+            <h4>Listen and Share Your Own Story</h4>
+            <p>Listen to what happened just before and after. Then share a time your own voice became loud too: <em>“I remember when my voice was loud yesterday when I couldn’t find the keys.”</em></p>
+          </div>
+        </div>
       </div>
 
-      <p>Give your child space to describe what happened in their own words.</p>
-      <p>You might listen for:</p>
-
-      <ul class="clean">
-        <li>What was happening?</li>
-        <li>What did they say or do?</li>
-        <li>What happened just before they shouted?</li>
-        <li>What happened afterwards?</li>
-      </ul>
-
-      <p>
-        Your child does not need to identify an emotion or give a reason if they don't know one.
-      </p>
-      <p>
-        You can share your own experiences too. The focus is on <strong>listening and understanding the child's experience</strong>, rather than correcting their behaviour.
-      </p>
-
-      <div class="callout">
-        <strong>Most importantly</strong>
-        <p>The parent’s role is simply to listen.</p>
-        <p>There is no need to judge, label, or fix the moment.</p>
+      <!-- What to Observe as a Parent -->
+      <div class="observation-block">
+        <span class="card-number">Parent Field Notes</span>
+        <h2>What to notice this week</h2>
+        <p>After you try this conversation, take 30 seconds to reflect on what you observed:</p>
+        <ul class="observation-questions">
+          <li class="observation-question-item">
+            <span class="observation-num">01</span>
+            <span>Did your child remember the moment readily, or did they need a gentle clue?</span>
+          </li>
+          <li class="observation-question-item">
+            <span class="observation-num">02</span>
+            <span>Did they seem defensive at first, or surprised that you weren’t upset?</span>
+          </li>
+          <li class="observation-question-item">
+            <span class="observation-num">03</span>
+            <span>How difficult or natural was it for you to simply listen without giving advice?</span>
+          </li>
+          <li class="observation-question-item">
+            <span class="observation-num">04</span>
+            <span>Did your child continue talking or share something unexpected?</span>
+          </li>
+        </ul>
       </div>
 
-      <p>
-        The goal is to help the child gradually become more aware of their own experiences and feel comfortable communicating them with a parent.
-      </p>
+      <!-- Add to Home Screen Cue -->
+      <div class="home-screen-card">
+        <div class="home-screen-header">
+          <div class="home-screen-icon">📲</div>
+          <div>
+            <h3 style="margin: 0; font-size: 1.15rem;">Keep JajooLab on your Home Screen</h3>
+            <p style="margin: 4px 0 0; font-size: 0.9rem; color: var(--muted);">
+              Read the guide once. Tap the icon later in the week when you’re ready to share your quick observation.
+            </p>
+          </div>
+        </div>
 
+        <div class="home-screen-tabs">
+          <button type="button" class="pwa-tab-btn active" data-tab="ios">iPhone (Safari)</button>
+          <button type="button" class="pwa-tab-btn" data-tab="android">Android (Chrome)</button>
+        </div>
+
+        <div class="pwa-step-guide" data-platform="ios">
+          <strong>On iPhone / iPad:</strong>
+          <ol>
+            <li>Tap the <strong>Share</strong> button at the bottom of Safari (<span style="font-size: 1.1em;">⎋</span> square with arrow).</li>
+            <li>Scroll down and tap <strong>Add to Home Screen</strong> (<span style="font-size: 1.1em;">⊞</span>).</li>
+            <li>Tap <strong>Add</strong> in the top right. JajooLab will appear like an app on your screen.</li>
+          </ol>
+        </div>
+
+        <div class="pwa-step-guide" data-platform="android" style="display: none;">
+          <strong>On Android:</strong>
+          <ol>
+            <li>Tap the <strong>three dots menu (⋮)</strong> in Chrome.</li>
+            <li>Select <strong>Add to Home screen</strong> or <strong>Install app</strong>.</li>
+            <li>Confirm to add. JajooLab will be accessible in one tap anytime.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Action & Feedback Panel -->
       <div class="form-panel">
-        <span class="card-number">Take part</span>
-        <h2>Interested in trying it?</h2>
+        <span class="card-number">Participation</span>
+        <h2>Ready to try this in your home?</h2>
         <p>
-          Registration is short. After registering, try the activity in a natural moment and later share what you noticed through the feedback form.
+          Registration is short. Try the activity naturally once this week, then return to share what you observed through the feedback form.
         </p>
 
         <div class="form-actions">
           <a class="button button-primary" data-form-link="friendshipWithSound.signup" target="_blank" rel="noopener" href="#">Register for Friendship with Sound</a>
-          <a class="button button-secondary" data-form-link="friendshipWithSound.feedback" target="_blank" rel="noopener" href="#">Share feedback</a>
+          <a class="button button-secondary" data-form-link="friendshipWithSound.feedback" target="_blank" rel="noopener" href="#">Share your observation</a>
+          <button class="button button-secondary share-button" type="button"
+                  onclick="shareActivity('Friendship with Sound · JajooLab', 'Notice when a voice became louder, then talk about it later when calm. A simple parent-child activity on JajooLab.')">
+            Share with a parent
+          </button>
         </div>
 
         <div class="confirmation-note">
-          <strong>After registration</strong>
+          <strong>After trying it</strong>
           <p class="small-note">
-            You will see the activity guidance in the form confirmation. You can then return here later to share your experience.
-          </p>
-        </div>
-
-        <div class="feedback-preview">
-          <strong>About the feedback</strong>
-          <p class="small-note">
-            The feedback is focused on what happened, what was noticed, and how the conversation felt in everyday life. It is designed to capture real experience rather than a specific outcome.
+            Neutral, unexpected, or awkward moments are equally valuable learning. The feedback form is designed to capture real experience, not a "successful" test.
           </p>
         </div>
 
         <p class="form-note">
-          The forms open securely in Google Forms. The website keeps the activity information and participation journey in one place.
+          Forms open securely in Google Forms.
         </p>
       </div>
+
     </div>
   </section>
 </main>
@@ -142,9 +264,10 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div>© 2026 JajooLab</div>
-    <div>Small steps. Real experiences. Let's learn from each other.</div>
+    <div>Small steps. Real experiences. Let’s learn from each other.</div>
   </div>
 </footer>
+
 <script src="/assets/js/forms.js"></script>
 <script src="/assets/js/main.js"></script>
 </body>
